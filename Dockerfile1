@@ -1,0 +1,12 @@
+FROM centos:7
+CMD echo "HELLO World"
+CMD echo "cc"
+FROM centos:7
+CMD echo "adam"
+MAINTAINER rezgui marwa
+RUN mkdir /tmp/test
+RUN ["/bin/sh","-c","mkdir /etc/test"]
+#installation de packet pour preparer l'image
+RUN yum install -y httpd
+RUN yum update -y
+RUN yum update -y && yum install -y \httpd\mariadb-server

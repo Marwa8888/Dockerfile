@@ -6,3 +6,9 @@ RUN chmod 777 -R /usr/share/nginx/html/
 #VOLUME /usr/share/nginx/html/
 EXPOSE 80
 CMD ["/usr/sbin/nginx","-g","daemon off;"]
+
+
+
+
+#FROM nginx:1.7
+RUN chmod 777 /usr/share/nginx/html/index.html
