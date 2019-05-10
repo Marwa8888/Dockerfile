@@ -1,0 +1,23 @@
+version: '2'
+services: 
+  nginx:
+    image: nginx:1.7
+    container_name: nginx
+    ports:
+    - 8899:80
+  #db:
+  # image: mariadb:10.1
+  # container_name: db
+  php:
+    build:
+      context: php_docker
+      dockerfile: Dockerfile
+      args: 
+        texte: hello marwa rezgui 
+    container_name: nginx1 
+    ports: 
+    - 8889:80 
+    
+  #context: chemain de Dcockerfile
+  #dockerfile: nom de fichier dockerfile
+
