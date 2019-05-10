@@ -1,0 +1,5 @@
+FROM nginx:1.7
+# ADD http://www.brainjar.com/java/host/test.html /usr/share/nginx/html/index.html 
+ARG texte
+RUN echo "$texte" > /usr/share/nginx/html/index.html
+RUN chmod 777 -R /usr/share/nginx/html/
